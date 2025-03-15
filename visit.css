@@ -1,0 +1,26 @@
+nav{
+    height: 80px; 
+    background-color: #DE6D98 !important;
+}
+
+body{
+    padding-top: 80px;
+}
+.container{
+    top:80px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 400px; /* Adjust the height as needed */
+    object-fit: cover; /* Ensures images are cropped to fit without distortion */
+    cursor: pointer;
+}
+
+.fixed-menu {
+    position: sticky; /* Sticky positioning */
+    top: 20px; /* Adjust this value to set how far from the top the menu should be */
+    z-index: 1000; /* Ensure the menu stays above other content */
+    top:100px;
+}
+
