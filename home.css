@@ -6,17 +6,17 @@
 
 body{
     text-align:center;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif, sans-serif;
+    font-family: poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Geneva, Tahoma, sans-serif, 'Times New Roman', Times, serif, sans-serif;
 }
 
 nav{
-    background-color: #C41E4E;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif, Helvetica, sans-serif;
+    background-color: #a73817;
     align-items: center;
     justify-content: space-between;
     width:100%;
-    height: 100px;
+    height: 80px;
     position: fixed;
+    z-index: 9999;
     top:0;
 }
 
@@ -27,12 +27,26 @@ nav{
 }
 
 .logo a{
-    line-height: 100px;
-    font-weight: 800;
-    font-size: 30px; 
+    line-height: 80px;
+    font-weight: 500;
+    font-size: 1.5em; 
     color: white;
-    padding-left: 30px;
+    padding-left: 20px;
 }
+
+a {
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease-out, color 0.3s ease-out;
+    background: #a73817;
+    border-radius: 25px;
+}
+
+.articles a:hover, li a:hover {
+    color:#a73817;
+    background: white;
+}
+
 
 li{
     list-style: none;
@@ -40,73 +54,43 @@ li{
 }
 
 li a{
-    color: white;
-    margin:5px;
-    padding: 20px; 
+    padding:9px;
+    margin:3px;
     font-weight: bold;
     font-size: 1em;
     text-transform: uppercase;
-    height:100px;
     transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 
 }
 
-li a:hover{
-    background:white;
-    color:#C41E4E;
-}
-
 
 .banner{
-    background-image:url(img/girl.jpg);
-    background-size:color;
+    background-image:url(img/mairie.jpg);
     background-position: center center;
     background-size: cover;
     position: fixed; 
-    height: 700px; 
+    height: 100%; 
     width: 100%;
-    top:100px;
+    top:80px;
 }
 
-.banner h2 {
+.banner h1 {
     text-align:center;
-    padding-top: 150px;
+    padding-top: 10%;
     padding-bottom:20px;
     font-size: 100px;
-    color: white;
+    color: #521c19;
+    line-height: 100px;
+    top:200px;
 }
 
 
 .banner p{
-    color: white;
+    color: #521c19;
     font-size: 30px;
     font-weight: bold;
 }
 
-button{
-    cursor:pointer;
-    margin:30px;
-    background: #DE6D98;
-    color: white;
-    font-size: 15px;
-    padding: 15px;
-    border-radius: 25px;
-    font-weight: bold;
-    background-position: 0 80%; /* Position it lower (adjust as needed) */
-    background-repeat: no-repeat;
-    background-size: 100% 0%; /* Covers only half of the text */
-    transition: background 0.3s ease-out, color 0.3s ease-out;
-    background-image: linear-gradient(#f1b2cb, #f1b2cb);
-    outline:none;
-    border:none;
-    overflow: hidden;
-}
-
-button:hover {
-    background: white;
-    color:#DE6D98;
-    
-}
 
 
 
@@ -147,18 +131,29 @@ button:hover {
     clear:both;
     background-position: 0 80%; /* Position it lower (adjust as needed) */
     background-repeat: no-repeat;
-    
 }
-
-
 
 .articles img {
     float: left;
     margin: 0% 5% 5% 15%; /* Adjust the margin as needed */
-    padding: 10px;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    top:20px;
+    padding-bottom:10px;
+    padding-right:10px;
+    background: white;
+    transition:  background 0.3s ease-out, transform 0.3s ease-in-out;
+    border-radius: 20px;
 }
+
+.articles img:hover {
+    background: #a44350;
+    transform: scale(1.1);
+}
+
+.articles a{
+    padding:10px; 
+}
+
+
 
 .articles p{
     margin:60px 15% 20px 15%;
@@ -166,13 +161,26 @@ button:hover {
 
 }
 
-.articles p a {
+.articles h2 {
+    position: relative;
+    padding:30px;
+}
+
+.articles h2::after {
+    content: "";
+    display: block;
+    width: 250px;
+    height: 4px;
+    background: #a44350;
+    margin: 5px auto 0;
+}
+
+/*.articles p a {
     color: black;
     text-decoration: none;
-     /* Background color */
-    background-position: 0 80%; /* Position it lower (adjust as needed) */
+    background-position: 0 80%; 
     background-repeat: no-repeat;
-    background-size: 100% 0%; /* Covers only half of the text */
+    background-size: 100% 0%;
     transition: background-size 0.3s ease-out;
     background-image: linear-gradient(#f1b2cb, #f1b2cb);
     border-radius: 15px;
@@ -182,6 +190,32 @@ button:hover {
 .articles p a:hover {
     background-size: 100% 100%;
 }
+    
+
+button{
+    cursor:pointer;
+    margin:30px;
+    background: #DE6D98;
+    color: white;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 25px;
+    font-weight: bold;
+    background-position: 0 80%; 
+    background-repeat: no-repeat;
+    background-size: 100% 0%; 
+    transition: background 0.3s ease-out, color 0.3s ease-out;
+    background-image: linear-gradient(#f1b2cb, #f1b2cb);
+    outline:none;
+    border:none;
+    overflow: hidden;
+}
+
+button:hover {
+    background: white;
+    color:#DE6D98;
+    
+}*/
 
 
 @media (max-width: 1000px) { /* For smaller screens */
@@ -189,7 +223,6 @@ button:hover {
         float: none; /* Remove float */
         display: block;
         margin: 0 auto; /* Center the image */
-        padding-top: 50px;
     }
     .articles p{
         margin: 20px 15% 20px 15%;
