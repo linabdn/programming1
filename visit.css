@@ -1,26 +1,435 @@
-nav{
-    height: 80px; 
-    background-color: #DE6D98 !important;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>What to visit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="visit.css" type="text/css">
 
-body{
-    padding-top: 80px;
-}
-.container{
-    top:80px;
-}
+</head>
+<body>
 
-.carousel-item img {
-    width: 100%;
-    height: 400px; /* Adjust the height as needed */
-    object-fit: cover; /* Ensures images are cropped to fit without distortion */
-    cursor: pointer;
-}
+    <nav class="navbar fixed-top my-custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html">
+            <img src="img/apple.png" alt="Logo" width="25" height="25" class="d-inline-block align-text-top">
+            VitryTour
+          </a>
 
-.fixed-menu {
-    position: sticky; /* Sticky positioning */
-    top: 20px; /* Adjust this value to set how far from the top the menu should be */
-    z-index: 1000; /* Ensure the menu stays above other content */
-    top:100px;
-}
+          <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Visit</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contact</a>
+              </li>
+          </ul>
+        </div>
+    </nav>
 
+    <div class="banner" style="background: url('img/bridge2.jpg') no-repeat center center; background-size: cover; width: 100%; height: 100vh; text-align: center;">
+        <h1><br><br>Beautiful structures to visit</h1>
+        <p>Discover the beauty of our amazing town.</p>
+    </div>
+
+      <div class="container mt-4">
+        <div class="row">
+            <!-- 7-column section (Main content) -->
+            <div class="col-md-7">    
+                <!-- Scrollspy content sections -->
+                <div id="content" data-bs-spy="scroll" data-bs-target="#menu" data-bs-offset="100">
+                    <div id="cultural" class="section-content">
+                        <h3>Cultural Places</h3>
+                        
+                    <!-- Carousel for Cultural places-->
+                    <div id="carouselCultural" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselCultural" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselCultural" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselCultural" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselCultural" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselCultural" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/macval.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5 style="color: #a73817;">Museum of Contemporary Arts</h5>
+                                    <p style="color: white;">Unique experience located in the City Centre</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/girl.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Art all over the city</h5>
+                                    <p>Be ready to see art everywhere you look</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/mairie.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The city hall</h5>
+                                    <p>1670 building with beautiful verreries</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/exploradome.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The Exploradome</h5>
+                                    <p>The Museum where it is forbidden not to touch</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/library.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The Nelson Mandela Library</h5>
+                                    <p>Workshops, exhibitions and all kinds of books, open to everyone!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselCultural" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselCultural" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    <div class="description">
+                        <h4><br>MacVal: Museum of Contemporary Arts</h4>
+                        <p>The MacVal is the first museum in France entirely dedicated to contemporary art from the 1950s onward. It showcases a diverse collection of modern artworks and hosts temporary exhbitions and cultural events. It has a beautiful garden, where locals go for a picnic, surrounded by artwork.
+                        </p>
+                        <a href="#">Plan your visit</a><br><br></p>
+                        <h4>Art all over the city</h4>
+                        <p>Vitry-sur-Seine is a vibrant hub for contemporary art, and MAC VAL is at the heart of it. The city boasts numerous public art installations and murals, adding to the rich cultural atmosphere. You can find artwork displayed in parks, streets, and even on the façades of buildings, offering a unique artistic experience.
+                        </p>
+                        <a href="#">Book a tour</a><br><br></p>
+                        <h4>The City Hall</h4>
+                        <p>The City Hall of Vitry-sur-Seine is a historical landmark, symbolizing the city’s growth and modernization. The modern architectural design blends with the old to create a beautiful space. The City Hall hosts various local events and exhibitions, contributing to the city's cultural vitality.
+                        </p>
+                        <a href="#">Plan your visit</a><br><br></p>
+                        <h4>The Exploradome</h4>
+                        <p>The Exploradome is an interactive science and discovery museum in Vitry-sur-Seine, dedicated to making learning fun for children and adults alike. It features hands-on exhibits that engage visitors in scientific exploration and promotes curiosity about the natural world. It's a great destination for families looking for an educational experience.
+                        </p>
+                        <a href="#">Book a visit</a><br><br></p>
+                        <h4>The Nelson Mandela Library</h4>
+                        <p>The Nelson Mandela Library in Vitry-sur-Seine is an important cultural institution, offering a wide range of books, digital resources, and educational programs for the community. The library also hosts literary events and workshops, celebrating the life and legacy of Nelson Mandela through cultural initiatives.
+                        </p>
+                        <a href="#">Plan your visit</a><br><br></p>
+                    </div>
+                    </div>
+                    
+                
+
+                    <!-- Où Manger Section with Carousel -->
+                <div id="eat" class="section-content">
+                    <h3>Restaurants</h3>
+
+                    <!-- Carousel for Où Manger -->
+                    <div id="carouselEat" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselEat" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselEat" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselEat" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselEat" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/dessert.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Grill Garden</h5>
+                                    <p>Go to the Grill Garden for French cuisine</p>
+                                    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/7_sushi2.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Seven Sushi</h5>
+                                    <p>For Japanese and Thai food, run to Seven Sushi</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/pepe_chicken.jpeg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Pepe Chicken</h5>
+                                    <p>Order from Pepe Chicken, famous French influencer FastGoodCuisine restaurant</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/metro_station.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Fourth slide label</h5>
+                                    <p>Some representative placeholder content for the fourth slide.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEat" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselEat" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    
+
+                    <div class="description">
+                        <h4><br>Grill Garden</h4>
+                        <p>Perfect for French cuisine. 
+                        </p>
+                        <a href="#">Book a table</a><br><br></p>
+                        <h4>Seven Sushi</h4>
+                        <p>Wonderful Asian food
+                        </p>
+                        <a href="#">Book a tour</a><br><br></p>
+                        <h4>Pepe Chicken</h4>
+                        <p>Viral fast food, created by famous French youtuber FastGoodCuisine. The first location was in Vitry-sur-Seine.
+                        </p>
+                        <a href="#">Plan your visit</a><br><br></p>
+                        <h4>The Exploradome</h4>
+                        <p>The Exploradome is an interactive science and discovery museum in Vitry-sur-Seine, dedicated to making learning fun for children and adults alike. It features hands-on exhibits that engage visitors in scientific exploration and promotes curiosity about the natural world. It's a great destination for families looking for an educational experience.
+                        </p>
+                        <a href="#">Book a visit</a><br><br></p>
+                    </div>
+                </div>
+    
+                    <div id="events" class="section-content">
+                        <h3>Events</h3>
+                        
+                    <!-- Carousel for the Events -->
+                    <div id="carouselEvents" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                            <button type="button" data-bs-target="#carouselEvents" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/theatre.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Theatre Jean Vilar</h5>
+                                    <p>Weekly representations at the Theatre Jean Vilar</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/concert.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Fete du lilas</h5>
+                                    <p>Yearly celebretation of the lilac, part of the history of the city</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/concert.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Free concerts</h5>
+                                    <p>During the Fete du Lilas, with artists like Dadju, Amel Bent, Nej and Aya!</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/metro_station.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>New Metro Visits</h5>
+                                    <p>Discover the future metro station in a tour</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/3cine.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The 3 Robespierre Cinemas</h5>
+                                    <p>Envie de regarder un film? Here is the perfect cinema</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselEvents" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselEvents" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                    </div>
+
+                    <div class="description">
+                        <h4><br>Theatre Jean Vilar</h4>
+                        <p>The MacVal is the first museum in France entirely dedicated to contemporary art from the 1950s onward. It showcases a diverse collection of modern artworks and hosts temporary exhbitions and cultural events. It has a beautiful garden, where locals go for a picnic, surrounded by artwork.
+                        </p>
+                        <a href="#">Voir la programmation</a><br><br></p>
+                        <h4>Fete du Lilas</h4>
+                        <p>Vitry-sur-Seine is a vibrant hub for contemporary art, and MAC VAL is at the heart of it. The city boasts numerous public art installations and murals, adding to the rich cultural atmosphere. You can find artwork displayed in parks, streets, and even on the façades of buildings, offering a unique artistic experience.
+                        </p>
+                        <a href="#">See dates</a><br><br></p>
+                        <h4>Concerts for All</h4>
+                        <p>The City Hall of Vitry-sur-Seine is a historical landmark, symbolizing the city’s growth and modernization. The modern architectural design blends with the old to create a beautiful space. The City Hall hosts various local events and exhibitions, contributing to the city's cultural vitality.
+                        </p>
+                        <a href="#">Voir la programmation</a><br><br></p>
+                        <h4>Visit the new metro en avant première</h4>
+                        <p>The Exploradome is an interactive science and discovery museum in Vitry-sur-Seine, dedicated to making learning fun for children and adults alike. It features hands-on exhibits that engage visitors in scientific exploration and promotes curiosity about the natural world. It's a great destination for families looking for an educational experience.
+                        </p>
+                        <a href="#">Book a visit</a><br><br></p>
+                        <h4>The 3 Robespierre</h4>
+                        <p>Go to the cinema. 
+                        </p>
+                        <a href="#">Voir la programmation</a><br><br></p>
+                    </div>
+    
+                    <div id="parks" class="section-content">
+                        <h3>Parks</h3>
+                        
+                    <!-- Carousel for Parks -->
+                    <div id="carouselParks" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselParks" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselParks" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselParks" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                            <button type="button" data-bs-target="#carouselParks" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/church.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Parc du Coteau</h5>
+                                    <p>Some representative placeholder content for the first slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/girl.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Parc des Cygnes</h5>
+                                    <p>Some representative placeholder content for the second slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/house_of_tourism.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Third slide label</h5>
+                                    <p>Some representative placeholder content for the third slide.</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/metro_station.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>Fourth slide label</h5>
+                                    <p>Some representative placeholder content for the fourth slide.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselParks" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselParks" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                        <p>Relax at the beautiful parks...</p>
+                        <p><br><br><br><br><br><br><br><br><br><br></p>
+                        
+                    </div>
+    
+                    <div id="markets" class="section-content">
+                        <h3>Les Marchés</h3>
+                        
+                    <!-- Carousel for Où Manger -->
+                    <div id="carouselMarkets" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselMarkets" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselMarkets" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselMarkets" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="img/place.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The City Center Market</h5>
+                                    <p>Vitry-sur-Seine is famous for its huge market</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/8_mai.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The 8th of May Market</h5>
+                                    <p>Shop for fresh food in the markets</p>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img src="img/house_of_tourism.jpg" class="d-block w-100" alt="...">
+                                <div class="carousel-caption d-block">
+                                    <h5>The Christmas Market</h5>
+                                    <p>Get some warmth during Christmas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselMarkets" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselMarkets" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                        <p>Explore local markets...</p>
+                        <p><br><br><br><br><br><br><br><br><br><br></p>
+
+                    </div>
+
+                </div>
+
+                <div id="parks" class="section-content">
+                    <h3>Map</h3>
+                    <div class="map">
+                    <img
+                    src="https://api.mapbox.com/styles/v1/mapbox/streets-v11/static/2.391378,48.787003,10/600x400?access_token=pk.eyJ1IjoiYm9yZWQ5MDkiLCJhIjoiY204Yzhvbzh3MWoybjJqczdscXg4NmIyMSJ9._kJcfK71AQNNd4hx5rh3Hw"
+                    alt="Map of the specified town"
+                    style="border: 1px solid black"
+                  />
+                </div>
+                  
+
+                    
+
+
+
+                </div>
+            </div>
+    
+            <!-- 5-column section (Right-side menu) -->
+            <div class="col-md-5">
+                <!-- Fixed Scrollspy Navigation (visible on larger screens) -->
+                <div class="fixed-menu d-none d-md-block text-center fw-bold" id="menu">
+                    <div id="list-example" class="list-group" >
+                        <a class="nav-link hover-background" href="#cultural" style="color: #a73817;">Cultural Places<br></a>
+                        <a class="nav-link" href="#eat" style="color: #a73817;">Where to eat<br></a>
+                        <a class="nav-link" href="#events" style="color: #a73817;">Events</a>
+                        <a class="nav-link" href="#parks" style="color: #a73817;">Parks</a>
+                        <a class="nav-link" href="#markets" style="color: #a73817;">Markets</a>
+                        <a class="nav-link" href="#map" style="color: #a73817;">Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+
+    
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
