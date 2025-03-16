@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    flex-wrap: wrap;
+    height: 80vh;
+    padding-top:80px;
+}
+
+/* 📸 Les images en plein écran */
+.image-container {
+    width: 33.33%; /* Chaque image prend 1/3 de la largeur */
+    height: 50%; /* Moitié de l'écran */
+    position:relative;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer; /* Curseur en main pour indiquer qu'on peut cliquer */
+    transition: filter 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    filter: brightness(0) invert(1);
+}
+
+/* 💡 Lightbox (pop-up) */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+    z-index: 10000;
+}
+
+.lightbox-content {
+    background: white;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    overflow-y: auto; /* Permet de scroller si beaucoup de contenu */
+    position: relative;
+    border-radius: 10px;
+}
+
+/* ❌ Bouton de fermeture */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* 🔥 Affichage de la lightbox */
+.lightbox.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.image-text {
+    position: absolute;
+    top: 0; /* Set top to 0 to align the text container to the top of the image */
+    left: 0; /* Align to the left */
+    right: 0; /* Ensure it spans the whole width */
+    bottom: 0; /* Ensure it spans the whole height */
+    color: white; /* Make the text color white */
+    font-size: 24px; /* Set font size to make it more readable */
+    text-align: center;
+    width:100%;
+    height:auto;
+    cursor:pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, transform 0.6s ease-in-out;
+}
+
+.image-text:hover {
+    color:black;
+    background-color: white;
+    transform: scale(1.1);
+
+}
