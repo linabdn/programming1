@@ -1,0 +1,32 @@
+
+header{
+    padding-top:80px; /*making the header starting below the navbar*/
+}
+
+/*characteristics of the title part; didnt use the class banner defined in home.css as too many characteristics were different*/
+.title{
+    padding-top: 100px;
+    background-image:url(img/girl.jpg);
+    background-position: center center;
+    background-size: cover;
+    height:400px;
+    width:100%;
+    color:black;
+    font-size: 30px;
+}
+
+.articles{
+    top:0px !important; /*overriding a style from home.css to make the articles show right below the title*/
+}
+
+footer{
+    top:0; /*necessary for the footer to show correctly*/
+}
+
+
+h3{
+    color: #bc5446; /*adding color to the subtitles at the bottom page to give more to see*/
+}
+
+
+
